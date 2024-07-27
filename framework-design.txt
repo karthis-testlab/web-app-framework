@@ -1,0 +1,52 @@
+.
+├── logs
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── web
+│   │   │           └── app
+│   │   │               ├── framework
+│   │   │               │   └── utlis
+│   │   │               │       ├── general
+│   │   │               │       │   ├── JavaHelpers.java
+│   │   │               │       │   └── Logs.java
+│   │   │               │       └── properties
+│   │   │               │           ├── ConfigPropertiesHandler.java
+│   │   │               │           └── objects
+│   │   │               │               ├── LandingPageElements.java
+│   │   │               │               └── LoginPageElements.java
+│   │   │               └── selenium
+│   │   │                   └── api
+│   │   │                       ├── base
+│   │   │                       │   ├── DriverInstance.java
+│   │   │                       │   └── SeleniumBase.java
+│   │   │                       └── design
+│   │   │                           ├── Browser.java
+│   │   │                           ├── Element.java
+│   │   │                           └── Locators.java
+│   │   └── resources
+│   └── test
+│       ├── java
+│       │   └── com
+│       │       └── web
+│       │           └── app
+│       │               ├── framework
+│       │               │   ├── pages
+│       │               │   │   ├── LandingPage.java
+│       │               │   │   └── LoginPage.java
+│       │               │   └── test
+│       │               │       └── suites
+│       │               │           └── TC001.java
+│       │               └── testng
+│       │                   └── api
+│       │                       ├── Retry.java
+│       │                       ├── RetryAnalyzers.java
+│       │                       └── TestNGHooks.java
+│       └── resources
+│           └── ObjectsRepositories
+│               ├── LandingPage.properties
+│               └── LoginPage.properties
+|
+└── waf-config.properties

@@ -1,7 +1,9 @@
 package com.web.app.selenium.api.base;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.By;
@@ -47,8 +49,7 @@ public class SeleniumBase extends DriverInstance implements Browser, Element {
 
 	@Override
 	public void append(WebElement ele, String data) {
-		ele.sendKeys(data);
-		
+		ele.sendKeys(data);		
 	}
 
 	@Override
@@ -266,9 +267,14 @@ public class SeleniumBase extends DriverInstance implements Browser, Element {
 	}
 
 	@Override
-	public WebElement locateElement(String value) {
-		// TODO Auto-generated method stub
-		return null;
+	public WebElement locateElement(String value) {		
+		WebElement element = null;
+		try {
+			element = getDriver().findElement(By.id(value));
+		} catch(Exception e) {
+			
+		}
+		return element;
 	}
 
 	@Override
@@ -309,8 +315,8 @@ public class SeleniumBase extends DriverInstance implements Browser, Element {
 
 	@Override
 	public void switchToWindow(int index) {
-		// TODO Auto-generated method stub
-		
+		ArrayList<String> tabs = new ArrayList<String>(getDriver().getWindowHandles());
+		getDriver().switchTo().window(tabs.get(index));
 	}
 
 	@Override
