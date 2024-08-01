@@ -27,5 +27,11 @@ public interface ConfigPropertiesHandler extends Config {
 	
 	@Key("waf.firefox.browser.options")
 	List<String> getFriefoxCliOptions();
+	
+	@Key("waf.report.folder.name.pattern")
+	String getReportFolderNamePattern();
+	
+	@Key("waf.report.file.name")
+	String getReportFileName();
 
 }
