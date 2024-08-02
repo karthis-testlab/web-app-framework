@@ -44,6 +44,6 @@ public class TestNGHooks extends SeleniumBase {
 	@AfterSuite(alwaysRun = true)
 	public void afterSuite() {		
 		endReport();
-	}
+	}	
 
 }
