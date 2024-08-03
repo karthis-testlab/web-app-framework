@@ -3,13 +3,13 @@ package com.web.app.framework.test.suites;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.web.app.framework.utils.data.handler.CsvDataHandler;
+import com.web.app.framework.utils.data.handler.DataHandler;
 
 public class TC002 {
 	
 	@DataProvider
 	public String[][] getCsvData() {
-		return CsvDataHandler.readDataFromCsv("TestData");
+		return DataHandler.readDataFromCsv("TestData");
 	}
 	
 	@Test(dataProvider = "getCsvData")

@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		          features = "src/test/java/com/web/app/framework/features/SaueDemo.feature",
 		          glue = "com.web.app.framework.step.definitions",
-		          dryRun = true,
+		          dryRun = false,
 		          monochrome = true,
 		          plugin = {
 				        	"pretty",

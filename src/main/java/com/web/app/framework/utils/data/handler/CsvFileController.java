@@ -9,10 +9,10 @@ import com.opencsv.exceptions.CsvException;
 
 public class CsvFileController {
 	
-	public static List<String[]>  fetchAllDataInCsv(String fileName) {
+	public static List<String[]> fetchAllDataInCsv(String fileName) {
 		  CSVReader reader;
 		  List<String[]>  rowRecords = null;
-		  try {
+		  try {			
 			  reader = new CSVReaderBuilder(
 					   new FileReader(System.getProperty("user.dir")+"/data/"+fileName+".csv"))
 			          .withSkipLines(1).build();

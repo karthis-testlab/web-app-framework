@@ -4,7 +4,7 @@ import static com.web.app.framework.utils.data.handler.CsvFileController.*;
 
 import java.util.List;
 
-public class CsvDataHandler {
+public class DataHandler {
 	
 	public static String[][] readDataFromCsv(String fileName) {
 		String[][] data = null;
@@ -16,6 +16,10 @@ public class CsvDataHandler {
 			}			
 		}
 		return data;
+	}
+	
+	public static String[][] readDataFromExcel(String fileName) {
+		return null;		
 	}
 
 }
